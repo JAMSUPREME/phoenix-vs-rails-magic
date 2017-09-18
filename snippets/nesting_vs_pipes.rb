@@ -23,18 +23,12 @@ end
 
 class Cat
   attr_accessor :size, :health
-
-  def base_price
-    100
-  end
+  def base_price() 100 end
 end
 
 class Dog
   attr_accessor :size, :health
-
-  def base_price
-    150
-  end
+  def base_price() 150 end
 end
 
 class Customer
@@ -76,4 +70,3 @@ customer = Customer.new
 customer.senior_citizen = true
 
 puts PedAdoptionService.new.calculate_fee(cat_to_buy, customer)
-

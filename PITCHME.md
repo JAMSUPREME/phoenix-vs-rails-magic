@@ -1,5 +1,5 @@
 
-# Demystifying the magic (Rails vs. Phoenix)
+### Demystifying the magic (Rails vs. Phoenix)
 
 Asking ourselves if Elixir and Phoenix add greater clarity to our code than Ruby and Rails.
 
@@ -7,7 +7,7 @@ Justin Spencer ([@jamsupreme](https://twitter.com/jamsupreme))
 
 +++
 
-# Questions policy
+### Questions policy
 
 For the sake of time and productivity, I request a few courtesies regarding questions:
 
@@ -20,19 +20,23 @@ For the sake of time and productivity, I request a few courtesies regarding ques
 
 ---
 
-# Nesting vs. Pipes
+### Nesting vs. Pipes
+
+Let's contrast traditional Object Oriented Programming (objects using objects) with something more functional (a pipeline of functions)
 
 +++?code=snippets/nesting_vs_pipes.rb&lang=ruby
 
-@[1-22](A piece of code that calculates the expense of adopting a pet)
-@[24-42](Plain old data)
-@[44-61](Code for calculating sales)
-@[63-70](Code for discounts)
-@[72-78](Caller code)
+@[1-10](A piece of code that calculates the expense of adopting a pet)
+@[12-21](Helper private method)
+@[24-36](Plain old data)
+@[38-47](Code for calculating sales)
+@[49-55](External API that determines sale)
+@[57-64](Code for discounts)
+@[66-72](Caller code)
 
 +++
 
-# Let's look at our call stack
+### Let's look at our call stack
 
 - PetAdoptionService
   - Pet (Cat)
@@ -41,13 +45,11 @@ For the sake of time and productivity, I request a few courtesies regarding ques
     - PetsApi
   - Discounter
   
-Bigger stack and often split out into several private methods.
+- Bigger stack and often split out into several private methods.
+- Some things are in the model, some in the service, some elsewhere.
+- Some things are static (self) methods, others are not.
 
-Some things are in the model, some in the service, some elsewhere.
-
-Some things are static (self) methods, others are not.
-
-# What if we imagine it as a series of steps?
+### What if we imagine it as a series of steps?
 
 - Get base price for pet
 - Change price depending on pet size
@@ -66,8 +68,13 @@ Some things are static (self) methods, others are not.
 
 +++
 
-# Reflections
+### Reflections
 
-- If we had to change the order of discount processing (dollar discounts before percentages, etc.) which would be easier? *(Think about shifting pipe order vs. modifying methods, children, and their tests)*
-- If we had to make our code flexible enough to deal with percentages, flat discounts, combination discounts, etc. which way would be easier to refactor? *(Thinking about types)*
-- Would this result in simpler testing, less stubbing? *(Think about dependencies in each class and testing in isolation vs. altogether)*
+- If we had to change the order of discount processing (dollar discounts before percentages, etc.) which would be easier? 
+- If we had to make our code flexible enough to deal with percentages, flat discounts, combination discounts, etc. which way would be easier to refactor? 
+- Would this result in simpler testing, less stubbing? 
+
+Note: 
+ - Think about shifting pipe order vs. modifying methods, children, and their tests
+ - Thinking about types
+ - Think about dependencies in each class and testing in isolation vs. altogether
