@@ -68,10 +68,10 @@ Let's contrast traditional Object Oriented Programming (objects using objects) w
 
 @[1-10](A piece of code that calculates the expense of adopting a pet)
 @[13-25](Plain old data)
-@[27-32](Code that was previously lumped into service)
-@[34-38](Code for calculating sales)
-@[40-43](Code previously lumped into sales service)
-@[45-52](Code for discounts)
+@[27-35](Code that was previously lumped into service)
+@[37-41](Code for calculating sales)
+@[43-47](Code previously lumped into sales service)
+@[49-58](Code for discounts)
 
 +++
 
