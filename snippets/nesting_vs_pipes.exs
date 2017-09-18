@@ -1,3 +1,14 @@
+cat = %Cat{size: :large}
+customer = %Customer{club_member: true}
+
+result = Cat.base_price
+  |> AdjustPriceForSize.call(cat.size)
+  |> AdjustPriceForSale.call
+  |> AdjustPriceForHealth.call(cat.health)
+  |> AdjustPriceForDiscounts.call(customer)
+
+IO.puts result
+
 
 defmodule Cat do
   defstruct size: nil, health: :good
@@ -39,20 +50,3 @@ defmodule AdjustPriceForDiscounts do
     price
   end
 end
-
-#cat = %Cat{size: :large}
-#customer = %Customer{club_member: true}
-#
-#result = Cat.base_price
-#  |> AdjustPriceForSize.call(cat.size)
-#  |> AdjustPriceForSale.call
-#  |> AdjustPriceForHealth.call(cat.health)
-#  |> AdjustPriceForDiscounts.call(customer)
-#
-#IO.puts result
-
-
-# Debrief thoughts:
-# - If we had to change the order of discount processing (dollar discounts before percentages, etc.) which would be easier? (Think about shifting pipe order vs. modifying methods, children, and their tests)
-# - If we had to make our code flexible enough to deal with percentages, flat discounts, combination discounts, etc. which way would be easier to refactor? (Thinking about types)
-# - Would this result in simpler testing, less stubbing? (Think about dependencies in each class and testing in isolation vs. altogether)

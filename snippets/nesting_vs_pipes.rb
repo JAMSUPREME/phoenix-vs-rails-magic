@@ -1,39 +1,3 @@
-class Cat
-  attr_accessor :size, :health
-
-  def base_price
-    100
-  end
-end
-
-class Dog
-  attr_accessor :size, :health
-
-  def base_price
-    150
-  end
-end
-
-class Customer
-  attr_accessor :senior_citizen, :club_member
-end
-
-# A look at our call hierarchy:
-# PetAdoptionService
-# - Pet (Cat)
-# - SaleService
-# -- Pet (Cat)
-# -- PetsApi
-# - Discounter
-# Bigger stack and often split out into several private methods
-# Some things are in the model, some in the service, some elsewhere
-
-# Let's think of this as a "workflow"
-# Get base price for pet
-# Change price depending on pet size
-# Modify price if there is a sale
-# Calculate discounts
-
 class PedAdoptionService
   def calculate_fee(pet, customer)
     base_price = pet.base_price
@@ -55,6 +19,26 @@ class PedAdoptionService
         base_price * 1.3
     end
   end
+end
+
+class Cat
+  attr_accessor :size, :health
+
+  def base_price
+    100
+  end
+end
+
+class Dog
+  attr_accessor :size, :health
+
+  def base_price
+    150
+  end
+end
+
+class Customer
+  attr_accessor :senior_citizen, :club_member
 end
 
 class SaleService
