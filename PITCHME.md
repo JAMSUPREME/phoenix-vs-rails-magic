@@ -1,5 +1,6 @@
 
-### Demystifying the magic (Rails vs. Phoenix)
+### Demystifying the magic 
+#### (Rails vs. Phoenix)
 
 Asking ourselves if Elixir and Phoenix add greater clarity to our code than Ruby and Rails.
 
@@ -29,10 +30,10 @@ Let's contrast traditional Object Oriented Programming (objects using objects) w
 @[1-10](A piece of code that calculates the expense of adopting a pet)
 @[12-21](Helper private method)
 @[24-36](Plain old data)
-@[38-47](Code for calculating sales)
-@[49-55](External API that determines sale)
-@[57-64](Code for discounts)
-@[66-72](Caller code)
+@[38-51](Code for calculating sales)
+@[53-60](External API that determines sale)
+@[62-73](Code for discounts)
+@[75-82](Caller code)
 
 +++
 
@@ -45,9 +46,15 @@ Let's contrast traditional Object Oriented Programming (objects using objects) w
     - PetsApi
   - Discounter
   
++++
+
+### What's not to like?
+  
 - Bigger stack and often split out into several private methods.
 - Some things are in the model, some in the service, some elsewhere.
 - Some things are static (self) methods, others are not.
+
++++
 
 ### What if we imagine it as a series of steps?
 

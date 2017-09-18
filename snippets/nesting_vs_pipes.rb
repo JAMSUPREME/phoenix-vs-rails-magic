@@ -38,8 +38,12 @@ end
 class SaleService
   class << self
     def sale_price(pet, current_price)
-      current_price = current_price - PetsApi.company_wide_sale if PetsApi.company_wide_sale
-      current_price = current_price * 0.3 if pet.health == :old
+      if PetsApi.big_sale
+        current_price = current_price - PetsApi.big_sale
+      end
+      if pet.health == :old
+        current_price = current_price * 0.3
+      end
 
       current_price
     end
@@ -47,8 +51,9 @@ class SaleService
 end
 
 class PetsApi
-  def self.company_wide_sale()
-    # Imagine we check some API that indicates a global sale
+  def self.big_sale()
+    # Imagine we check some API that
+    # indicates a global sale
     # $20 off!
     20
   end
@@ -56,8 +61,12 @@ end
 
 class Discounter
   def calculate_discounts(original_price, customer)
-    original_price = original_price * 0.95 if customer.senior_citizen
-    original_price = original_price * 0.80 if customer.club_member
+    if customer.senior_citizen
+      original_price = original_price * 0.95
+    end
+    if customer.club_member
+      original_price = original_price * 0.80
+    end
 
     original_price
   end
@@ -69,4 +78,5 @@ cat_to_buy.size = :large
 customer = Customer.new
 customer.senior_citizen = true
 
-puts PedAdoptionService.new.calculate_fee(cat_to_buy, customer)
+puts PedAdoptionService.new.calculate_fee(cat_to_buy,
+                                          customer)
