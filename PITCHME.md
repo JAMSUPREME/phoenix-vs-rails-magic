@@ -12,11 +12,11 @@ todo
 # Nesting vs. Pipes
 
 
-+++?code=snippets/nestings_vs_pipes.exs&lang=elixir
++++?code=snippets/nesting_vs_pipes.exs&lang=elixir
 
 How about this?
 
 
-+++?code=snippets/nestings_vs_pipes.rb&lang=ruby
++++?code=snippets/nesting_vs_pipes.rb&lang=ruby
 
 And this?
