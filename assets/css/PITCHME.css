@@ -1,0 +1,12 @@
+
+.left-column {
+    float: left;
+    display: block;
+    width: 50%;
+}
+
+.right-column {
+    float: right;
+    display: block;
+    width: 50%;
+}
