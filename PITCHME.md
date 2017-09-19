@@ -135,7 +135,18 @@ With our newfound knowledge of how pipes stack up against objects, let's see how
 
 +++?code=snippets/plugs.rb&lang=ruby
 
+@[1-4](For all controllers, authenticate and authorize)
+@[6-9](For these actions, **skip** authenticate and authorize)
+@[11-13](For this controller, also fill in some data)
+
 +++?code=snippets/plugs.exs&lang=elixir
+
+@[1-3](Our cat controller)
+@[5-11](Purchase cat fills in some data)
+@[13-21](Seems daunting but worry not)
+@[23-27](Custom auth pipeline)
+@[29-34](Endpoints using auth)
+@[36-40](Endpoints without auth)
 
 +++
 
