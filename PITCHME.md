@@ -18,10 +18,39 @@ For the sake of time and productivity, I request a few courtesies regarding ques
 - Please hold onto broad questions until the end of a section or the presentation
   - "Why implement it this way?"
   - "How can I apply this to my legacy codebase?"
+  
++++
+
+### What we **won't** cover
+
+- Intro to Ruby or Elixir
+- Intro to Rails or Phoenix
+- Deep dive into the above
+
+If you're not familiar with any, don't worry, the concepts still largely apply.
+
++++
+
+### What we **will** cover
+
+- Code that often seems like [evil] "magic" to those unaccustomed to Ruby/Rails
+- Ways that Elixir avoids magic (if you want)
+- Pondering how magic can be minimized in our Ruby code
+- Contemplating the advantages/disadvantages of each language and framework
+
++++
+
+### Before we begin / Disclaimers
+
+- Ruby/Elixir comparison, then Rails/Phoenix comparison
+- Some code may be exaggerated in complexity for didactic purposes
+- I do not consider myself a Ruby/Rails expert, much less so for Elixir/Phoenix
+- After each big section is a **Reflections** slide with a few things to think about
 
 ---
 
 ### Nesting vs. Pipes
+#### Ruby vs. Elixir
 
 Let's contrast traditional Object Oriented Programming (objects using objects) with something more functional (a pipeline of functions)
 
@@ -85,3 +114,102 @@ Note:
  - Think about shifting pipe order vs. modifying methods, children, and their tests
  - Thinking about types
  - Think about dependencies in each class and testing in isolation vs. altogether
+ 
+---
+
+### The beauty of plugs and pipelines
+#### Rails vs. Phoenix
+
+With our newfound knowledge of how pipes stack up against objects, let's see how this applies to web development with Phoenix and Plugs.
+
++++?code=snippets/plugs.rb&lang=ruby
+
++++?code=snippets/plugs.exs&lang=elixir
+
++++
+
+### Reflections:
+
+- If we had to shift around before_actions / plugs, in which context would it be easier?
+- Should plugs and/or before actions be reliant on other actions/plugs?
+- Is it easier to look at a pipeline or a class hierarchy of actions?
+- Can rails actions be tested in isolation?
+- What do we gain from the "halted" idiom?
+
+---
+
+### Types and pattern matching, who needs 'em?
+#### Ruby vs. Elixir
+
+Let's contrast some free-spirited Ruby code with its Elixir counterpart.
+
++++?code=snippets/patterns_and_specs.rb&lang=ruby
+
++++?code=snippets/patterns_and_specs.exs&lang=elixir
+
+
++++
+
+### Reflections:
+
+- Is the Elixir code more affine to signature modifications?
+- Is code clarity improved? Documentation? Does the Dialyzer incline us more?
+
+---
+
+### What is it called again? (Params and variables)
+#### Rails vs. Phoenix
+
+Armed with our knowledge of pattern matching, let's see how this applies to our web controllers.
+
++++?code=snippets/params_and_vars.rb&lang=ruby
+
++++?code=snippets/params_and_vars.exs&lang=elixir
+
++++
+
+### Reflections:
+
+- Is it preferable to have an explicit signature or a blanket `params`?
+- What are the advantages of explicit assignments?
+- Does this simplify testing?
+
+---
+
+### Help me! (Helpers, Concerns, and so on...)
+#### Rails vs. Phoenix
+
+Are helpers really that helpful?
+
++++?code=snippets/helpers.rb&lang=ruby
+
++++?code=snippets/helpers.exs&lang=elixir
+
++++
+
+### Reflections:
+
+- How are we dodging the Rails pitfall with helpers and concerns?
+- Would it be a problem if "everything" was a plug? Would that be any worse than the Rails alternative?
+
+---
+
+### To magic, or not to magic?
+
+We've seen some comparisons of Ruby and Elixir, as well as how those differences impact the respective Rails and Phoenix frameworks.
+
+I hope to leave you with a few final thoughts (regardless of your tech stack):
+
+- Am I writing "magical" code?
+- If I come back to this code after 6 months, how long will it take to ramp up?
+- How easy it is to maintain my code?
+
+---
+
+### Resources
+
+This presentation:
+https://github.com/JAMSUPREME/phoenix-vs-rails-magic
+
+This presentation on gitpitch:
+https://gitpitch.com/jamsupreme/phoenix-vs-rails-magic
