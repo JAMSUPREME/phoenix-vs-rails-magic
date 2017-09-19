@@ -56,8 +56,14 @@ Let's contrast traditional Object Oriented Programming (objects using objects) w
 
 +++
 
-![nest](https://www.playerattack.com/imagery/2010/08/AngryBirds-Nest.jpg)
-![pipe](https://reichanjapan.files.wordpress.com/2016/02/super-mario-3d-world.png)
+<div>
+  <div class="left-column">
+    <img src="https://www.playerattack.com/imagery/2010/08/AngryBirds-Nest.jpg" alt="nest" />
+  </div>
+  <div class="right-column">
+    <img src="https://reichanjapan.files.wordpress.com/2016/02/super-mario-3d-world.png" alt="pipe" />
+  </div>
+</div>
 
 +++?code=snippets/nesting_vs_pipes.rb&lang=ruby
 
