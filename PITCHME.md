@@ -145,8 +145,8 @@ With our newfound knowledge of how pipes stack up against objects, let's see how
 @[5-11](Purchase cat fills in some data)
 @[13-21](Seems daunting but worry not)
 @[23-27](Custom auth pipeline)
-@[29-34](Endpoints using auth)
-@[36-40](Endpoints without auth)
+@[29-34](GET using auth)
+@[36-40](GET without auth)
 
 +++
 
@@ -172,8 +172,15 @@ Let's contrast some free-spirited Ruby code with its Elixir counterpart.
 
 +++?code=snippets/patterns_and_specs.rb&lang=ruby
 
+@[1-7](Calls an external API)
+@[9-17](Makes auth or no-auth call based on user info)
+
 +++?code=snippets/patterns_and_specs.exs&lang=elixir
 
+@[1-15](Data describing our function args)
+@[17-21](when based pattern match)
+@[23-29](Pattern matches based on arguments)
+@[31-37](GET code much like we did in Ruby)
 
 +++
 
