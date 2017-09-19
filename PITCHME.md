@@ -203,7 +203,15 @@ Armed with our knowledge of pattern matching, let's see how this applies to our 
 
 +++?code=snippets/params_and_vars.rb&lang=ruby
 
+@[1-10](A resource and special route)
+@[12-20](Controller action)
+@[22-23](ERB markup snippet)
+
 +++?code=snippets/params_and_vars.exs&lang=elixir
+
+@[1-7](A resource and special route)
+@[9-19](New distinct action matching special route)
+@[21-25](EEX markup snippet)
 
 +++
 
@@ -227,7 +235,17 @@ Are helpers really that helpful?
 
 +++?code=snippets/helpers.rb&lang=ruby
 
+@[1-5](Should it go here?)
+@[7-10](Or here?)
+@[13-18](Maybe here?)
+@[20-22](Here seems good)
+@[24-28](Actually I like it here)
+
 +++?code=snippets/helpers.exs&lang=elixir
+
+@[1-4](Our options)
+@[6-15](In the controller)
+@[17-23](In the model)
 
 +++
 
