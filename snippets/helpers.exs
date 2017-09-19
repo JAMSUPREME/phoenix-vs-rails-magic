@@ -1,12 +1,14 @@
-# In this case, our options (probably) boil down to two (or three) choices:
-# in the controller (one-time usage, perhaps as an inline or distinct plug)
-# in the model (multi-usage, only applies to users)
+# In this case, our options (probably) boil
+# down to two (or three) choices:
+# - in the controller inline (or as a plug)
+# - in the model
 
 defmodule MyApp.UserController do
   def index(conn, _params) do
+    # my syntax may be off here, forgive me
     active_users = Repo.all(from u in "users",
                             where: u.active == true,
-                            select: u) # my syntax may be off here, forgive me
+                            select: u)
 
     render(conn, "index.html", active_users: active_users)
   end

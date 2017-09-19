@@ -135,7 +135,18 @@ With our newfound knowledge of how pipes stack up against objects, let's see how
 
 +++?code=snippets/plugs.rb&lang=ruby
 
+@[1-4](For all controllers, authenticate and authorize)
+@[6-9](For these actions, **skip** authenticate and authorize)
+@[11-13](For this controller, also fill in some data)
+
 +++?code=snippets/plugs.exs&lang=elixir
+
+@[1-3](Our cat controller)
+@[5-11](Purchase cat fills in some data)
+@[13-21](Seems daunting but worry not)
+@[23-27](Custom auth pipeline)
+@[29-34](GET using auth)
+@[36-40](GET without auth)
 
 +++
 
@@ -161,8 +172,15 @@ Let's contrast some free-spirited Ruby code with its Elixir counterpart.
 
 +++?code=snippets/patterns_and_specs.rb&lang=ruby
 
+@[1-7](Calls an external API)
+@[9-17](Makes auth or no-auth call based on user info)
+
 +++?code=snippets/patterns_and_specs.exs&lang=elixir
 
+@[1-15](Data describing our function args)
+@[17-21](when based pattern match)
+@[23-29](Pattern matches based on arguments)
+@[31-37](GET code much like we did in Ruby)
 
 +++
 
@@ -185,7 +203,15 @@ Armed with our knowledge of pattern matching, let's see how this applies to our 
 
 +++?code=snippets/params_and_vars.rb&lang=ruby
 
+@[1-10](A resource and special route)
+@[12-20](Controller action)
+@[22-23](ERB markup snippet)
+
 +++?code=snippets/params_and_vars.exs&lang=elixir
+
+@[1-7](A resource and special route)
+@[9-19](New distinct action matching special route)
+@[21-25](EEX markup snippet)
 
 +++
 
@@ -209,7 +235,17 @@ Are helpers really that helpful?
 
 +++?code=snippets/helpers.rb&lang=ruby
 
+@[1-5](Should it go here?)
+@[7-10](Or here?)
+@[13-18](Maybe here?)
+@[20-22](Here seems good)
+@[24-28](Actually I like it here)
+
 +++?code=snippets/helpers.exs&lang=elixir
+
+@[1-4](Our options)
+@[6-15](In the controller)
+@[17-23](In the model)
 
 +++
 
