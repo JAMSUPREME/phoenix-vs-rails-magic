@@ -138,7 +138,8 @@ With our newfound knowledge of how pipes stack up against objects, let's see how
 
 ---
 
-### Types and pattern matching, who needs 'em?
+### Types and pattern matching
+#### *(who needs 'em?)*
 #### Ruby vs. Elixir
 
 Let's contrast some free-spirited Ruby code with its Elixir counterpart.
@@ -157,7 +158,8 @@ Let's contrast some free-spirited Ruby code with its Elixir counterpart.
 
 ---
 
-### What is it called again? (Params and variables)
+### What is it called again?
+#### *(Params and variables)*
 #### Rails vs. Phoenix
 
 Armed with our knowledge of pattern matching, let's see how this applies to our web controllers.
@@ -176,7 +178,8 @@ Armed with our knowledge of pattern matching, let's see how this applies to our 
 
 ---
 
-### Help me! (Helpers, Concerns, and so on...)
+### Help me!
+#### *(Helpers, Concerns, and so on...)*
 #### Rails vs. Phoenix
 
 Are helpers really that helpful?
