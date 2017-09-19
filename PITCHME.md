@@ -262,8 +262,6 @@ Are helpers really that helpful?
 
 +++
 
-We've seen some comparisons of Ruby and Elixir, as well as how those differences impact the respective Rails and Phoenix frameworks.
-
 I hope to leave you with a few final thoughts (regardless of your tech stack):
 
 - Am I writing "magical" code?
