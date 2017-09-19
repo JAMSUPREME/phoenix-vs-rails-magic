@@ -54,6 +54,11 @@ If you're not familiar with any, don't worry, the concepts still largely apply.
 
 Let's contrast traditional Object Oriented Programming (objects using objects) with something more functional (a pipeline of functions)
 
++++
+
+![nest](https://www.playerattack.com/imagery/2010/08/AngryBirds-Nest.jpg)
+![pipe](https://reichanjapan.files.wordpress.com/2016/02/super-mario-3d-world.png)
+
 +++?code=snippets/nesting_vs_pipes.rb&lang=ruby
 
 @[1-10](A piece of code that calculates the expense of adopting a pet)
@@ -144,6 +149,10 @@ With our newfound knowledge of how pipes stack up against objects, let's see how
 
 Let's contrast some free-spirited Ruby code with its Elixir counterpart.
 
++++
+
+![pattern tips](https://i.ytimg.com/vi/_JWWclKKgZ8/maxresdefault.jpg)
+
 +++?code=snippets/patterns_and_specs.rb&lang=ruby
 
 +++?code=snippets/patterns_and_specs.exs&lang=elixir
@@ -163,6 +172,10 @@ Let's contrast some free-spirited Ruby code with its Elixir counterpart.
 #### Rails vs. Phoenix
 
 Armed with our knowledge of pattern matching, let's see how this applies to our web controllers.
+
++++
+
+![what](http://i0.kym-cdn.com/entries/icons/facebook/000/018/489/nick-young-confused-face-300x256_nqlyaa.jpg)
 
 +++?code=snippets/params_and_vars.rb&lang=ruby
 
@@ -184,6 +197,10 @@ Armed with our knowledge of pattern matching, let's see how this applies to our 
 
 Are helpers really that helpful?
 
++++
+
+![lost](http://p.fod4.com/p/media/a87c8cb843/mRluNDklT1mSqS675Akp_c13.gif)
+
 +++?code=snippets/helpers.rb&lang=ruby
 
 +++?code=snippets/helpers.exs&lang=elixir
@@ -198,6 +215,10 @@ Are helpers really that helpful?
 ---
 
 ### To magic, or not to magic?
+
+![wizard](https://images-cdn.9gag.com/photo/386037_700b.jpg)
+
++++
 
 We've seen some comparisons of Ruby and Elixir, as well as how those differences impact the respective Rails and Phoenix frameworks.
 
