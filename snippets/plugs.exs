@@ -12,7 +12,7 @@ end
 
 # A lot of the changes here actually go into the router
 # The perceived boon is that everything
-# goes through a predictable path before hitting our controller
+# goes through a predictable path before the controller
 defmodule MyApp.Router do
   use MyApp.Web, :router
 
