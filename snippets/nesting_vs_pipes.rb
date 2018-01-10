@@ -1,4 +1,4 @@
-class PedAdoptionService
+class PetAdoptionService
   def calculate_fee(pet, customer)
     base_price = pet.base_price
 
@@ -78,5 +78,5 @@ cat_to_buy.size = :large
 customer = Customer.new
 customer.senior_citizen = true
 
-puts PedAdoptionService.new.calculate_fee(cat_to_buy,
+puts PetAdoptionService.new.calculate_fee(cat_to_buy,
                                           customer)
